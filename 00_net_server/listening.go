@@ -16,7 +16,7 @@ func listenForConnection(listener net.Listener) {
 	}
 
 	// See how connections are handled in handling.go.
-	handleConnection(c)
+	go handleConnection(c)
 }
 
 // Starts listening for TCP connections on port 8080. Will run a service
